@@ -1,0 +1,1 @@
+Avatars must be 95 x 128 pixels.
