@@ -45,18 +45,20 @@ _VERSION = "1.0"
 _DEBUG = False
 
 
+# This is the game itself
 class Game(MDBoxLayout):
-	AVATAR_SIZE = (128, 128)
-	# Sets the time of the gameplay in seconds
-	PLAYTIME = 14
-	time = PLAYTIME
-	score = 0
-	highscore = 0
-	# Used as a flag by the countdown thread
-	ingame = False
-
 	def __init__(self, **kwargs):
 		super(Game, self).__init__(**kwargs)
+
+		self.AVATAR_SIZE = (128, 128)
+		# Sets the time of the gameplay in seconds
+		self.PLAYTIME = 14
+		self.time = self.PLAYTIME
+		self.score = 0
+		self.highscore = 0
+		# Used as a flag by the countdown thread
+		self.ingame = False
+
 		self.highscore = read_highscore()
 		self.orientation = "vertical"
 		self.padding = 10
