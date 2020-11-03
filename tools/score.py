@@ -3,7 +3,7 @@
 
 with open('../vale.cfg', 'r') as f:
 	data = f.read()
-print("Highscore: {}".format(data.split()[-1]))
+print("Current highscore is {}.".format(data.split()[-1]))
 
 new_hs = int(input("Enter new highscore: "))
 with open('../vale.cfg', 'w') as f:
